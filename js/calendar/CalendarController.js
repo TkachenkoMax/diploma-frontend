@@ -13,16 +13,27 @@ $(document).ready(function () {
         if (startDay == -1)
           startDay = 6;
 
+        $(".days").append("<tr>");
+
         for (var i = 0; i < startDay; i++) {
-          $(".days").append("<li></li>");
+          $(".days").append("<td></td>");
         }
 
         for (var i = 0; i < date.daysInMonth(); i++) {
           if ((date.format('MMMM YYYY') == now.format('MMMM YYYY')) && ((i + 1) == now.format("D"))) {
-            $(".days").append("<li><span class='active'>" +  (i + 1) + "</span></li>");
+            $(".days").append("<td class='calendar-day'><span class='active-calendar-day'>" +  (i + 1) + "</span></td>");
           } else {
-            $(".days").append("<li>" +  (i + 1) + "</li>");
+            $(".days").append("<td class='calendar-day'>" +  (i + 1) + "</td>");
           }
+
+          if (++startDay == 7) {
+             $(".days").append("</tr><tr>");
+             startDay = 0;
+          }
+        }
+
+        while(startDay++ < 7) {
+          $(".days").append("<td></td>");
         }
       },
 

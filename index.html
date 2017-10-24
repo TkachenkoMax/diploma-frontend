@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- Log in modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -20,16 +21,163 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            In progress...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Log in</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="loginEmail" class="col-sm-3 col-form-label">Email: </label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="loginPassword" class="col-sm-3 col-form-label">Password: </label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-9 offset-md-3">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Log in</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+    <!-- Create calendar modal -->
+    <div class="modal fade" id="createCalendarModal" tabindex="-1" role="dialog" aria-labelledby="createCalendarModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="createCalendarModal">New calendar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="createName" class="col-sm-3 col-form-label">Name: </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="createName" placeholder="Calendar name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="createDescription" class="col-sm-3 col-form-label">Description: </label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="createDescription" rows="3" placeholder="Description"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-9 offset-md-3">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Is public
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Edit calendar modal -->
+    <div class="modal fade" id="editCalendarModal" tabindex="-1" role="dialog" aria-labelledby="editCalendarModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editCalendarModal">Edit calendar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="chooseCalendar" class="col-sm-5 col-form-label">Choose calendar: </label>
+                <div class="col-sm-7">
+                  <select class="custom-select" id="chooseCalendar">
+                    <option selected>Open this select menu</option>
+                    <option value="1">My calendar 1</option>
+                    <option value="2">My calendar 2</option>
+                    <option value="3">My calendar 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="createName" class="col-sm-3 col-form-label">Name: </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="createName" placeholder="Calendar name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="createDescription" class="col-sm-3 col-form-label">Description: </label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="createDescription" rows="3" placeholder="Description"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-9 offset-md-3">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" disabled> Is public
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Delete calendar modal -->
+    <div class="modal fade" id="deleteCalendarModal" tabindex="-1" role="dialog" aria-labelledby="deleteCalendarModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteCalendarModal">Delete calendar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="chooseCalendar" class="col-sm-5 col-form-label">Choose calendar: </label>
+                <div class="col-sm-7">
+                  <select class="custom-select" id="chooseCalendar">
+                    <option selected>Open this select menu</option>
+                    <option value="1">My calendar 1</option>
+                    <option value="2">My calendar 2</option>
+                    <option value="3">My calendar 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Main part -->
     <div class="side-menu-button" id="side-menu-open">
       <div class="bar1"></div>
       <div class="bar2"></div>
@@ -40,10 +188,10 @@
     </div>
     <div class="container">
       <div class="row header">
-        <div class="col-md-2">
-          <h1 class="text-center">Logo</h1>
+        <div class="col-md-3">
+          <h1 class="text-center logo">Ahead of time</h1>
         </div>
-        <div class="col-md-2 offset-md-8 align-self-center">
+        <div class="col-md-2 offset-md-7 align-self-center">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
             Log in
           </button>
@@ -51,7 +199,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 ">
-          <ul class="nav justify-content-center navbar-light" style="background-color: #e3f2fd;">
+          <ul class="nav justify-content-center navbar-dark bg-dark" style="background-color: #e3f2fd;">
             <li class="nav-item">
               <a class="nav-link active-menu" href="#">Calendars</a>
             </li>
@@ -64,12 +212,12 @@
           </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-2 offset-md-4 text-center">My calendars</div>
-        <div class="col-md-2 text-center">My events</div>
+      <div class="row add-menu">
+        <div class="col-md-2 offset-md-4 text-center"><a href="">My calendars</a></div>
+        <div class="col-md-2 text-center"><a href="">My events</a></div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
+      <div class="row align-items-center">
+        <div class="col-md-11">
           <div class="month">      
             <ul>
               <li class="prev" id="calendar-prev">&#10094;</li>
@@ -95,6 +243,11 @@
             </tbody>
           </table>
         </div>
+        <div class="col-md-1 calendar-buttons">
+          <div><i class="fa fa-plus fa-2x" data-toggle="modal" data-target="#createCalendarModal"></i></div>
+          <div><i class="fa fa-pencil fa-2x" data-toggle="modal" data-target="#editCalendarModal"></i></div>
+          <div><i class="fa fa-trash fa-2x" data-toggle="modal" data-target="#deleteCalendarModal"></i></div>
+        </div>
       </div>  
       <div class="row">
         <div class="col-md-12 footer">
@@ -106,6 +259,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/e0869bc4be.js"></script>
     <script src="js/script.js"></script>
     <script src="js/calendar/CalendarController.js"></script>
     <script src="js/libs/moment-with-locales.js"></script>

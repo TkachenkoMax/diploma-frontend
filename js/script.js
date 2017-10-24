@@ -11,7 +11,7 @@ $(document).ready(function() {
 	    }
 	    else {
 	    	$('#side-menu-close').attr('id', 'side-menu-open');
-	    	$(".side-menu-button div").css("background-color", "#333");
+	    	$(".side-menu-button div").css("background-color", "white");
 	    	closeNav();
 	    }
 	});
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	*/
 	function openNav() {
 	    $("#side-menu").css("width", "500px");
-	    $("body").css("backgroundColor", "rgba(0,0,0,0.4)");
+	    //$("body").css("backgroundColor", "rgba(0,0,0,0.4)");
 	};
 
 	/**
@@ -29,6 +29,6 @@ $(document).ready(function() {
 	*/
 	function closeNav() {
 	    $("#side-menu").css("width", "0");
-	    $("body").css("backgroundColor", "white");
+	    $("body").css("backgroundColor", "#252830");
 	};
 });

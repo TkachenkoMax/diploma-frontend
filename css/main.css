@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.logo {
+    color: white;
+    cursor: pointer;
+}
+
+.add-menu {
+    margin: 10px 0;
+}
+
 .side-menu-button {
     position: fixed;
     top: 30px;
@@ -9,7 +20,7 @@
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -33,8 +44,10 @@
 
 ul {list-style-type: none;}
 body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Roboto', Verdana, sans-serif;
     transition: background-color .5s;
+    background-color: #252830;
+    color: white;
 }
 
 .month {
@@ -153,7 +166,7 @@ body {
 
 .footer {
     margin-top: 20px;
-    border-top: 3px dashed black;
+    border-top: 3px dashed white;
 }
 
 .nav-item {
@@ -166,4 +179,24 @@ body {
 
 .header {
     margin: 20px 0;
+}
+
+.calendar-buttons {
+    padding: 0;
+}
+
+.calendar-buttons div {
+    padding: 10px;
+}
+
+.calendar-buttons i {
+    cursor: pointer;
+}
+
+.modal {
+    color: black;
+}
+
+.add-menu {
+    
 }

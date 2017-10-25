@@ -197,6 +197,6 @@ body {
     color: black;
 }
 
-.add-menu {
-    
+.hidden {
+    display: none;
 }

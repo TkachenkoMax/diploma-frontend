@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+ul {list-style-type: none;}
+body {
+    font-family: 'Roboto', Verdana, sans-serif;
+    transition: background-color .5s;
+    background-color: #252830;
+    color: white;
+}
+
+/* COMMON RULES */
+
 .logo {
     color: white;
     cursor: pointer;
@@ -9,46 +19,32 @@
     margin: 10px 0;
 }
 
-.side-menu-button {
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    cursor: pointer;
-    z-index: 100;
+.header {
+    margin: 20px 0;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
+.footer {
+    margin-top: 20px;
+    border-top: 3px dashed white;
 }
 
-/* Rotate first bar */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+.nav-item {
+    font-size: 2em;
+}   
+
+.active-menu {
+    text-decoration: underline;
 }
 
-/* Fade out the second bar */
-.change .bar2 {
-    opacity: 0;
+.modal {
+    color: black;
 }
 
-/* Rotate last bar */
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+.hidden {
+    display: none;
 }
 
-ul {list-style-type: none;}
-body {
-    font-family: 'Roboto', Verdana, sans-serif;
-    transition: background-color .5s;
-    background-color: #252830;
-    color: white;
-}
+/* CALENDAR */
 
 .month {
     padding: 70px 25px;
@@ -120,6 +116,63 @@ body {
     color: white !important
 }
 
+.calendar-buttons {
+    padding: 0;
+}
+
+.calendar-buttons div {
+    padding: 10px;
+}
+
+.calendar-buttons i {
+    cursor: pointer;
+}.calendar-buttons {
+    padding: 0;
+}
+
+.calendar-buttons div {
+    padding: 10px;
+}
+
+.calendar-buttons i {
+    cursor: pointer;
+}
+
+/* SIDE-MENU BUTTON */
+
+.side-menu-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+/* SIDE-MENU */
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -133,11 +186,14 @@ body {
     padding-top: 60px;
 }
 
-.sidenav h2 {
+.sidenav-block {
     padding: 8px 8px 8px 32px;
+    color: #818181;
+}
+
+.sidenav h2 {
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s;
 }
@@ -146,17 +202,8 @@ body {
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
+.sidenav div {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-height: 450px) {
@@ -164,39 +211,31 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-.footer {
-    margin-top: 20px;
-    border-top: 3px dashed white;
+@media screen and (min-height: 768px){
+    .calendar-buttons {
+        display: flex;
+        justify-content: center;    
+    }  
+    .calendar-buttons div {
+        display: inline-block;
+    }
 }
 
-.nav-item {
-    font-size: 2em;
-}   
-
-.active-menu {
-    text-decoration: underline;
+.search {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+    background-image: url('../files/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
 
-.header {
-    margin: 20px 0;
-}
-
-.calendar-buttons {
-    padding: 0;
-}
-
-.calendar-buttons div {
-    padding: 10px;
-}
-
-.calendar-buttons i {
-    cursor: pointer;
-}
-
-.modal {
-    color: black;
-}
-
-.add-menu {
-    
+.search:focus {
+    width: 100%;
 }

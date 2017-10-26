@@ -20,8 +20,7 @@ $(document).ready(function() {
 	* Opens the side menu
 	*/
 	function openNav() {
-	    $("#side-menu").css("width", "500px");
-	    //$("body").css("backgroundColor", "rgba(0,0,0,0.4)");
+	    $("#side-menu").css("width", "400px");
 	};
 
 	/**
@@ -31,4 +30,56 @@ $(document).ready(function() {
 	    $("#side-menu").css("width", "0");
 	    $("body").css("backgroundColor", "#252830");
 	};
+
+	/**
+	* Login form validation
+	*/
+	$(function () {
+	  $('#loginForm').parsley().on('field:validated', function() {
+	    var ok = $('.parsley-error').length === 0;
+	    $('.bs-callout-info').toggleClass('hidden', !ok);
+	    $('.bs-callout-warning').toggleClass('hidden', ok);
+	  });
+	});
+
+	/**
+	* Create calendar form validation
+	*/
+	$(function () {
+	  $('#createCalendarForm').parsley().on('field:validated', function() {
+	    var ok = $('.parsley-error').length === 0;
+	    $('.bs-callout-info').toggleClass('hidden', !ok);
+	    $('.bs-callout-warning').toggleClass('hidden', ok);
+	  });
+	});
+
+	/**
+	* Edit calendar form validation
+	*/
+	$(function () {
+	  $('#editCalendarForm').parsley().on('field:validated', function() {
+	    var ok = $('.parsley-error').length === 0;
+	    $('.bs-callout-info').toggleClass('hidden', !ok);
+	    $('.bs-callout-warning').toggleClass('hidden', ok);
+	  });
+	});
+
+		/**
+	* Edit calendar form validation
+	*/
+	$(function () {
+	  $('#deleteCalendarForm').parsley().on('field:validated', function() {
+	    var ok = $('.parsley-error').length === 0;
+	    $('.bs-callout-info').toggleClass('hidden', !ok);
+	    $('.bs-callout-warning').toggleClass('hidden', ok);
+	  });
+	});
+
+	$(document).ready(function(){
+	  $('input').iCheck({
+  		checkboxClass: 'icheckbox_polaris',
+    	radioClass: 'iradio_polaris',
+    	increaseArea: '-10%' // optional
+	 	});
+	});
 });

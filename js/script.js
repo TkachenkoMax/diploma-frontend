@@ -20,8 +20,7 @@ $(document).ready(function() {
 	* Opens the side menu
 	*/
 	function openNav() {
-	    $("#side-menu").css("width", "500px");
-	    //$("body").css("backgroundColor", "rgba(0,0,0,0.4)");
+	    $("#side-menu").css("width", "400px");
 	};
 
 	/**
@@ -74,5 +73,13 @@ $(document).ready(function() {
 	    $('.bs-callout-info').toggleClass('hidden', !ok);
 	    $('.bs-callout-warning').toggleClass('hidden', ok);
 	  });
+	});
+
+	$(document).ready(function(){
+	  $('input').iCheck({
+  		checkboxClass: 'icheckbox_polaris',
+    	radioClass: 'iradio_polaris',
+    	increaseArea: '-10%' // optional
+	 	});
 	});
 });

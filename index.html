@@ -12,6 +12,7 @@
     <!-- Other CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/parsley.css">
+    <link href="css/skins/polaris/polaris.css" rel="stylesheet">
   </head>
   <body>
     <!-- Log in modal -->
@@ -231,16 +232,52 @@
       <div class="bar3"></div>
     </div>
     <div id="side-menu" class="sidenav">
-      <div>
-        <h2>Displaying calendars</h1>
-        <hr color="white">
-      </div>
-      <div class="div">
-        <h2>My calendars</h3>
-
-      </div>
-      <div>
-        <h2>External calendars</h3>
+      <div class="sidenav-block">
+        <div>
+          <h2>Displaying calendars</h2>
+          <hr color="white">
+        </div>
+        <div>
+          <h2>My calendars</h3>
+          <div>
+            <input type="checkbox" checked>
+            <span>Work</span>
+          </div>
+          <div>
+            <input type="checkbox">
+            <span>Study</span>
+          </div>
+        </div>
+        <div>
+          <h2>External calendars</h2>
+          <div>
+            <input type="checkbox">
+            <span>Diploma</span>
+            <a class="btn btn-danger" href="" aria-label="Delete" style="margin-left: 100px">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div>
+            <input type="checkbox">
+            <span>Course project</span>
+            <a class="btn btn-danger" href="" aria-label="Delete" style="margin-left: 55px">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+          </div>
+          <hr color="white">
+        </div>
+        <div>
+          <form action="">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" name="search" placeholder="Search.." class="search" autocomplete="off">
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-info">Add</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="container">
